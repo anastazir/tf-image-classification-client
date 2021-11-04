@@ -17,7 +17,7 @@ export const getLabel = async (style, setLabels) => {
     mode: 'cors',
     credentials: 'include',
     headers: {
-      'Access-Control-Allow-Origin':'*',
+      'Access-Control-Allow-Origin':'https://tf-image-classification-server.herokuapp.com',
       'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
     }
