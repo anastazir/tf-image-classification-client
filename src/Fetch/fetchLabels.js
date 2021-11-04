@@ -13,7 +13,12 @@ export const getLabel = async (style, setLabels) => {
       }
     }
   }
-  fetch(`https://tf-image-classification-server.herokuapp.com/fetchLabels?labelsType=${style}`).then((response) =>{ //make predictions
+  fetch(`https://tf-image-classification-server.herokuapp.com/fetchLabels?labelsType=${style}`,{
+    mode: 'cors',
+    headers: {
+      'Access-Control-Allow-Origin':'*'
+    }
+  }).then((response) =>{ //make predictions
   if(response.ok){
     return response.json()
   }

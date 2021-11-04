@@ -19,7 +19,11 @@ export const handleUrl = (text, coordinates, setNotifications, add, style, notif
     setPredicting(true)
     await fetch(`https://tf-image-classification-server.herokuapp.com/urlRoute/${style}`, {
       method: 'POST',
-      body: formData
+      body: formData,
+      mode: 'cors',
+      headers: {
+        'Access-Control-Allow-Origin':'*'
+      }
     }).then(response => {
         response.json().then(data => {
         if (Array.isArray(data.data)){
@@ -63,7 +67,11 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
       setPredicting(true)
       await fetch(`https://tf-image-classification-server.herokuapp.com/upload-image/${style}`, {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'cors',
+        headers: {
+          'Access-Control-Allow-Origin':'*'
+        }
       }).then(response => {
           response.json().then(data => {
           if (Array.isArray(data.data)){
