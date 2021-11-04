@@ -22,7 +22,9 @@ export const handleUrl = (text, coordinates, setNotifications, add, style, notif
       body: formData,
       mode: 'cors',
       headers: {
-        'Access-Control-Allow-Origin':'*'
+        'Access-Control-Allow-Origin':'*',
+        'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
       }
     }).then(response => {
         response.json().then(data => {
@@ -70,7 +72,9 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
         body: formData,
         mode: 'cors',
         headers: {
-          'Access-Control-Allow-Origin':'*'
+          'Access-Control-Allow-Origin':'*',
+          'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
         }
       }).then(response => {
           response.json().then(data => {
