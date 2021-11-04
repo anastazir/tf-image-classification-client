@@ -17,7 +17,7 @@ export const handleUrl = (text, coordinates, setNotifications, add, style, notif
 
   const Upload = async() => {
     setPredicting(true)
-    await fetch(`/urlRoute/${style}`, {
+    await fetch(`https://tf-image-classification-server.herokuapp.com/urlRoute/${style}`, {
       method: 'POST',
       body: formData
     }).then(response => {
@@ -61,7 +61,7 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
 
     const Upload = async() => {
       setPredicting(true)
-      await fetch(`upload-image/${style}`, {
+      await fetch(`https://tf-image-classification-server.herokuapp.com/upload-image/${style}`, {
         method: 'POST',
         body: formData
       }).then(response => {
