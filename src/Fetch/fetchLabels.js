@@ -15,6 +15,7 @@ export const getLabel = async (style, setLabels) => {
   }
   fetch(`https://tf-image-classification-server.herokuapp.com/fetchLabels?labelsType=${style}`,{
     mode: 'cors',
+    credentials: 'include',
     headers: {
       'Access-Control-Allow-Origin':'*',
       'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',

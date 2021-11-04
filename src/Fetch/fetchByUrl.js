@@ -21,6 +21,7 @@ export const handleUrl = (text, coordinates, setNotifications, add, style, notif
       method: 'POST',
       body: formData,
       mode: 'cors',
+      credentials: 'include',
       headers: {
         'Access-Control-Allow-Origin':'*',
         'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
@@ -69,6 +70,7 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
       setPredicting(true)
       await fetch(`https://tf-image-classification-server.herokuapp.com/upload-image/${style}`, {
         method: 'POST',
+        credentials: 'include',
         body: formData,
         mode: 'cors',
         headers: {
