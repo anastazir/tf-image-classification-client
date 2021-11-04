@@ -2,7 +2,7 @@
   "name": "react-framer-demo",
   "version": "0.1.2",
   "private": true,
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "https://tf-image-classification-server.herokuapp.com",
   "dependencies": {
     "compress.js": "^1.2.1",
     "framer-motion": "^4.1.17",
