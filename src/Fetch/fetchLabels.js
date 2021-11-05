@@ -20,6 +20,7 @@ export const getLabel = async (style, setLabels) => {
       'Access-Control-Allow-Origin':'https://frosty-varahamihira-2e4ee4.netlify.app',
       'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
       'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
+      'Access-Control-Allow-Credentials': 'true'
     }
   }).then((response) =>{ //make predictions
   if(response.ok){
