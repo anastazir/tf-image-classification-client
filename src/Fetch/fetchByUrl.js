@@ -20,15 +20,7 @@ export const handleUrl = (text, coordinates, setNotifications, add, style, notif
     await fetch(`https://tf-image-classification-server.herokuapp.com/urlRoute/${style}`, {
       method: 'POST',
       body: formData,
-      mode: 'cors',
-      credentials: 'include',
-      headers: {
-        'Access-Control-Allow-Origin':'*',
-        'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
-        'Access-Control-Allow-Credentials': 'true',
-        'Content-Type': 'application/json'
-      }
+     
     }).then(response => {
         response.json().then(data => {
         if (Array.isArray(data.data)){
@@ -74,14 +66,7 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
         method: 'POST',
         credentials: 'include',
         body: formData,
-        mode: 'cors',
-        headers: {
-          'Access-Control-Allow-Origin':'*',
-          'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-          'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
-          'Access-Control-Allow-Credentials': 'true',
-          'Content-Type': 'application/json'
-        }
+        
       }).then(response => {
           response.json().then(data => {
           if (Array.isArray(data.data)){

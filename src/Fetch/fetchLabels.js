@@ -13,16 +13,7 @@ export const getLabel = async (style, setLabels) => {
       }
     }
   }
-  fetch(`https://tf-image-classification-server.herokuapp.com/fetchLabels?labelsType=${style}`,{
-    mode: 'cors',
-    credentials: 'include',
-    headers: {
-      'Access-Control-Allow-Origin':'https://frosty-varahamihira-2e4ee4.netlify.app',
-      'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
-      'Access-Control-Allow-Credentials': 'true'
-    }
-  }).then((response) =>{ //make predictions
+  fetch(`https://tf-image-classification-server.herokuapp.com/fetchLabels?labelsType=${style}`).then((response) =>{ //make predictions
   if(response.ok){
     return response.json()
   }
