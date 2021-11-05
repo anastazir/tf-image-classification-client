@@ -64,9 +64,7 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
       setPredicting(true)
       await fetch(`https://tf-image-classification-server.herokuapp.com/upload-image/${style}`, {
         method: 'POST',
-        credentials: 'include',
         body: formData,
-        
       }).then(response => {
           response.json().then(data => {
           if (Array.isArray(data.data)){
