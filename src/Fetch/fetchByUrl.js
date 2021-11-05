@@ -26,6 +26,7 @@ export const handleUrl = (text, coordinates, setNotifications, add, style, notif
         'Access-Control-Allow-Origin':'https://frosty-varahamihira-2e4ee4.netlify.app',
         'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
         'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
+        'Content-Type': 'application/json'
       }
     }).then(response => {
         response.json().then(data => {
@@ -77,6 +78,7 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
           'Access-Control-Allow-Origin':'https://frosty-varahamihira-2e4ee4.netlify.app',
           'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
           'Access-Control-Allow-Headers':'Origin, Content-Type, X-Auth-Token',
+          'Content-Type': 'application/json'
         }
       }).then(response => {
           response.json().then(data => {
