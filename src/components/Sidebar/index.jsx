@@ -51,7 +51,6 @@ const HamburgerButton = ({ x, width, isOpen, setOpen }) => {
   return (
     <HamburgerContainer
       onTap={() => {
-        console.log(isOpen)
         setOpen(!isOpen)
         isOpen ? x.set(-width) : x.set(0)
       }}
@@ -66,7 +65,6 @@ const Sidebar = ({ width = 320, style }) => {
   const [labels, setLabels] = useState(['no labels'])
   const [isOpen, setOpen] = useState(false)
   const x = useSpring(0, { stiffness: 400, damping: 40 })
-  console.log('style is ', style);
   useEffect(() => {
     (getLabel(style, setLabels))
   }, [style])
@@ -95,8 +93,8 @@ const Sidebar = ({ width = 320, style }) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               className="refresh-button"
-              onClick={() => console.log('clicking')}>
-                Refresh
+            >
+              Refresh
             </motion.button>
           </SidebarContainer>
         )}

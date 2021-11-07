@@ -9,7 +9,6 @@ const InputList=({category})=> optionValues.map((option, i)=>{
 })
 
 const Select = ({handleStyle, category}) => {
-    console.log("category in Select.jsx is" ,category);
     return (  
         <>
         <motion.select className="input" onChange={handleStyle}>

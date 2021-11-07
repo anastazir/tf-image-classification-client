@@ -3,7 +3,6 @@ import ReactCrop from "react-image-crop";
 import "./CropImage.css";
 
 export default function CropImage({url, setCoordinates}) {
-  console.log(url);
   const [upImg, setUpImg] = useState(`${url}`);
   const imgRef = useRef(null);
   const previewCanvasRef = useRef(null);
@@ -48,10 +47,6 @@ export default function CropImage({url, setCoordinates}) {
       crop.width * scaleX,
       crop.height * scaleY
     );
-    console.log("dx is --", crop.x * scaleX);
-    console.log("dy is --", crop.y * scaleY);
-    console.log("dWidth is --", crop.width * scaleX);
-    console.log("dHeight is --", crop.height * scaleY);
     setCoordinates([crop.x * scaleX, crop.y * scaleY, crop.width * scaleX, crop.height * scaleY])
   }, [completedCrop]);
 

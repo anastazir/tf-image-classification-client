@@ -57,7 +57,6 @@ function App() {
     if(e.target.files && e.target.files[0]) {
       uploadedImage= e.target.files[0]
       setImage(URL.createObjectURL(e.target.files[0]))
-        console.log(uploadedImage)
         setImageShown(uploadedImage)
       }
     handleUpload(uploadedImage, coordinates, style, add, notifications, setPredicting, openResultdModal, setNotifications, isCrop)
@@ -107,8 +106,6 @@ function App() {
   useEffect(() =>{
     setImageShown(image)
   }, [image])
-
-  console.log('coordinates are:', coordinates);
 
   return (
   <>

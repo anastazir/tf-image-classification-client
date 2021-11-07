@@ -11,6 +11,5 @@ export const remove = (arr, item) => {
 let newIndex = 0;
 export const add = (arr, text, style, ans) => {
   newIndex = newIndex + 1;
-  console.log("ans in utils.js is",ans);
   return [...arr, { id: newIndex, text: text, style: style, ans: ans }];
 };

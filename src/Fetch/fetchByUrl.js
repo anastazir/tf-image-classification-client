@@ -42,7 +42,6 @@ export const handleUpload=(uploadedImage, coordinates, style, add, notifications
   const compress= new Compress()
   var [dx, dy, dHeight, dWidth]= coordinates
   newImage= uploadedImage ? uploadedImage : newImage
-  console.log(newImage)
   compress.compress([newImage], {
     size: 4, 
     quality: .75,
