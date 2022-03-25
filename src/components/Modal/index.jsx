@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
-import Backdrop from "../Backdrop/index";
-import ImageShow from "../ImageShow/ImageShow";
+import { motion } from      "framer-motion";
+import { useDispatch, useSelector } from 'react-redux';
+import Backdrop from        "../Backdrop/index";
+import ImageShow from       "../ImageShow/ImageShow";
 
 const liStyle = {
   margin: 'auto',
@@ -80,7 +81,14 @@ const result = {
   },
 };
 
-const Modal = ({ handleClose, text, type, data, img }) => {
+const Modal = ({ text, type = "result"}) => {
+  const dispatch = useDispatch()
+  const arrayList = useSelector((state) => state.modalReducer.result);
+
+  const handleClose = () =>{
+    dispatch({type : "CLOSE"})
+  }
+
   return (
     <Backdrop onClick={handleClose}>
       {type === "emptyInput" && (
@@ -119,8 +127,8 @@ const Modal = ({ handleClose, text, type, data, img }) => {
           animate="visible"
           exit="exit"
         >
-          <ImageShow img={img}/>
-          <ResultText data={data} />
+          <ImageShow />
+            <ResultText data={arrayList} />
         </motion.div>
       )}
     </Backdrop>

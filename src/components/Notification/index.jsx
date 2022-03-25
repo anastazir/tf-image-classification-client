@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { remove } from "../../helper/arr-utils";
+import { useDispatch } from             'react-redux';
+import { removeNotification } from "../../actions/notifications";
 
 const notificationVariants = {
   initial: {
@@ -21,11 +22,12 @@ const notificationVariants = {
   hover: { scale: 1.05, transition: { duration: 0.1 } },
 };
 
-const Notification = ({ notifications, setNotifications, notification, openResultdModal }) => {
-  const { text, style, ans } = notification;
-  const handleClose = () => setNotifications(remove(notifications, notification));
+const Notification = ({ notification}) => {
+  const { style, ans } = notification;
+  const dispatch = useDispatch();
+  const handleClose = () => {dispatch(removeNotification(notification))};
+
   const styleType = () => {
-    // Controlled by selection menu
     switch (style) {
       case "faceMaskClassification":
         return { background: "linear-gradient(15deg, #6adb00, #04e800)", cursor: "pointer"};

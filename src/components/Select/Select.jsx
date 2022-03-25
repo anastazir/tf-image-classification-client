@@ -11,9 +11,9 @@ const InputList=({category})=> optionValues.map((option, i)=>{
 const Select = ({handleStyle, category}) => {
     return (  
         <>
-        <motion.select className="input" onChange={handleStyle}>
-          <InputList category={category} />
-        </motion.select>  
+            <motion.select className="input" onChange={handleStyle}>
+            <InputList category={category} />
+            </motion.select>  
         </>
     )
 }

@@ -1,17 +1,3 @@
-export   const encodeFileBase64 = (file, setFileBase64String) => {
-    var reader = new FileReader();
-    if (file) {
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        var Base64 = reader.result;
-        setFileBase64String(Base64);
-      };
-      reader.onerror = (error) => {
-        console.log("error: ", error);
-      };
-    }
-};
-
 export const switchAns = (data) =>{
   if (data==='Mask'){
     data= data+' 😷'
