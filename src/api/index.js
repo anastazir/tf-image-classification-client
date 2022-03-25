@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://127.0.0.1:5000' });
+const API = axios.create({ baseURL: 'https://tf-image-classification-server.herokuapp.com' });
 
 export const predict_image = (formData, style) => API.post(`/urlRoute/${style}`, formData);
 
