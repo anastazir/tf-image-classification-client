@@ -1,6 +1,6 @@
 export const optionValues=[
     {
-        name: '🔥 Classify Everything',
+        name: '🔥 Face Classification',
         value: 'everything',
         type: ['faceClassification', 'showAll']
     },
