@@ -23,6 +23,8 @@ import { compressFile } from              "./helper/compressFile";
 import { predictFile, predictImage } from "./actions/modal";
 
 function App() {
+console.log("process.env.API_GATEWAY_API", process.env.API_GATEWAY_API)
+
   const dispatch = useDispatch();
   const [base64, setbase64] = useState(null)
   const loading = useSelector((state) => state.modalReducer.loading);
