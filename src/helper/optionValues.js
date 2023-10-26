@@ -1,34 +1,34 @@
 export const optionValues=[
-    {
-        name: '🔥 Face Classification',
-        value: 'everything',
-        type: ['faceClassification', 'showAll']
-    },
-    {
-        name: '🤿 Mask Classification',
-        value: 'faceMaskClassification',
-        type: ['binaryClassification', 'faceClassification', 'showAll']
-    },
-    {
-        name: '♂️ or ♀️ Classification',
-        value: 'genderClassification',
-        type: ['binaryClassification', 'faceClassification', 'showAll']
-    },
-    {
-        name: '👨‍🦰 Emotion Detection',
-        value: 'emotionClassification',
-        type: ['multiClassification', 'faceClassification', 'showAll']
-    },
-    {
-        name: '👓or👀',
-        value: 'glassesClassification',
-        type: ['binaryClassification', 'faceClassification', 'showAll']
-    },
-    {
-        name: '🧔 Age Classification',
-        value: 'ageClassification',
-        type: ['multiClassification', 'faceClassification', 'showAll']
-    },
+// {
+//         name: '🔥 Face Classification',
+//         value: 'everything',
+//         type: ['faceClassification', 'showAll']
+//     },
+//     {
+//         name: '🤿 Mask Classification',
+//         value: 'faceMaskClassification',
+//         type: ['binaryClassification', 'faceClassification', 'showAll']
+//     },
+//     {
+//         name: '♂️ or ♀️ Classification',
+//         value: 'genderClassification',
+//         type: ['binaryClassification', 'faceClassification', 'showAll']
+//     },
+//     {
+//         name: '👨‍🦰 Emotion Detection',
+//         value: 'emotionClassification',
+//         type: ['multiClassification', 'faceClassification', 'showAll']
+//     },
+//     {
+//         name: '👓or👀',
+//         value: 'glassesClassification',
+//         type: ['binaryClassification', 'faceClassification', 'showAll']
+//     },
+//     {
+//         name: '🧔 Age Classification',
+//         value: 'ageClassification',
+//         type: ['multiClassification', 'faceClassification', 'showAll']
+//     },
     {
         name: '🐱or🐶',
         value: 'catvsDog',

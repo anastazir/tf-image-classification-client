@@ -45,7 +45,7 @@ function App() {
   };
 
   // Option style
-  const [style, setStyle] = useState("everything");
+  const [style, setStyle] = useState("catvsDog");
   const handleStyle = (e) => setStyle(e.target.value);
   // Category style
   const [category, setCategory] = useState("showAll");
