@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const API = axios.create({ baseURL: 'your-api-link' });
-const API = axios.create({ baseURL: process.env.REACT_APP_API_GATEWAY_API + "/Prod"});
+const API = axios.create({ baseURL: "https://k86b32et99.execute-api.ap-south-1.amazonaws.com" + "/Prod"});
 
 export const predict_image = (formData, style) => API.post(`/urlRoute/${style}`, formData);
 
