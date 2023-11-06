@@ -9,6 +9,7 @@ const SelectType = ({handleCategory}) => {
           <option value="binaryClassification">II Binary Classification</option>
           <option value="multiClassification">V Multiclass Classification</option>
           <option value="animalClassification">🧸 Animal Classification</option>
+          <option value="faceClassification">👶 Face Classification</option>
         </motion.select>  
         </>
     )
