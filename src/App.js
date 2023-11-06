@@ -45,7 +45,7 @@ function App() {
   };
 
   // Option style
-  const [style, setStyle] = useState("catvsDog");
+  const [style, setStyle] = useState("dogClassification");
   const handleStyle = (e) => setStyle(e.target.value);
   // Category style
   const [category, setCategory] = useState("showAll");
